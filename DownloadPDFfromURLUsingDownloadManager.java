@@ -134,29 +134,3 @@
         context.startActivity(i);
     }
    /*-------------------------------------------------------------------------------------------------------------------------*/     
-   
-   
-/*--------------------------------------------------------------res/xml/file_paths---------------------------------------------------------*/
-<?xml version="1.0" encoding="utf-8"?>
-<paths>
-    <external-path
-        name="files_root"
-        path="documents/" />
-    <external-path
-        name="external_storage_root"
-        path="." />
-</paths>
-/*-----------------------------------------------------------------------------------------------------------------------*/
-
-/*-----------------AndroidManifest.xml---------------------  use below code inside application tag-------------------------*/
-         <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:grantUriPermissions="true"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-                
-                
