@@ -28,3 +28,7 @@ private static <T> Predicate<T> distinctByKeys(Function<? super T, ?>... keyExtr
 
         };
 }
+
+
+
+List<Object> newList = categoryList.stream().distinct().collect(Collectors.toList()); // remove dublicate item from list
